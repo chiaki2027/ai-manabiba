@@ -29,7 +29,7 @@ const DATA = {
       video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDokbMyFwoORrYzY0cwIRtiAZOfH6KoZ6b_A_gHb9URPiQ?e=kxETQ3",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UMkpKSDZOQ1MzRUwxVVZMMFo4SFExTktPWS4u",
       samples: [],
-      demo: { label: "会話お題ルーレット", url: "apps/roulette.html" },
+      demo: null,
       thumb: "thumbs/v01.webp"
     },
     {
@@ -126,7 +126,7 @@ const DATA = {
       video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQANq_4sx68LTp-z00JnSZmNAXKpMnNmKSgPmjnOKuDUzdQ?e=r5pKHs",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNVlHUEw1T1lGMTRSQ0FTNUc2OTJCN0QwUS4u",
       samples: [],
-      demo: null,
+      demo: { label: "会話お題ルーレット", url: "apps/roulette.html" },
       thumb: "thumbs/v10.webp"
     },
     {
