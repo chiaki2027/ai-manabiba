@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AIまなびば</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23ff3e8e%22/><polygon points=%2238,28 78,50 38,72%22 fill=%22white%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141a4d;
+  --navy-deep:#0d1238;
+  --ink:#1b2150;
+  --paper:#ffffff;
+  --pink:#ff3e8e;
+  --pink-deep:#e0246f;
+  --pink-pale:#ffd9ea;
+  --peri:#8f9bff;
+  --peri-pale:#e3e7ff;
+  --lemon:#ffd84d;
+  --mint:#35c9a3;
+  --text-on-navy:#f2f3ff;
+  --text-sub:#aab3e8;
+  --disp:"Zen Maru Gothic",sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  --latin:"Baloo 2",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--body);
+  color:var(--text-on-navy);
+  line-height:1.7;
+  background:
+    radial-gradient(rgba(255,255,255,.045) 1.5px, transparent 1.5px) 0 0/26px 26px,
+    linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);
+  background-color:var(--navy-deep);
+}
+a{color:inherit}
+::selection{background:var(--pink);color:#fff}
+
+/* ============ hero ============ */
+.hero{padding:3.2rem 1.5rem 2.4rem;position:relative;overflow:hidden}
+.hero-inner{max-width:1060px;margin:0 auto;position:relative}
+.eyebrow{
+  display:inline-block;
+  font-family:var(--latin);font-weight:800;font-size:.72rem;letter-spacing:.22em;
+  color:var(--navy);background:var(--lemon);
+  border:2px solid var(--ink);border-radius:8px;
+  padding:.12rem .8rem;transform:rotate(-2deg);
+  box-shadow:3px 3px 0 rgba(0,0,0,.35);
+}
+h1{
+  margin:.9rem 0 0;
+  font-family:var(--disp);font-weight:900;
+  font-size:clamp(2.4rem,6vw,3.6rem);
+  letter-spacing:.05em;line-height:1.2;
+  text-wrap:balance;
+}
+h1 .ai{
+  display:inline-block;color:#fff;background:var(--pink);
+  border:3px solid #fff;border-radius:14px;
+  padding:0 .35em;margin-right:.12em;
+  transform:rotate(-3deg);
+  box-shadow:4px 4px 0 rgba(0,0,0,.35);
+  font-family:var(--latin);
+}
+.scribble{display:block;width:min(340px,60%);margin-top:.2rem}
+.lede{margin:1rem 0 0;max-width:36em;color:var(--text-sub);font-size:.95rem}
+.lede strong{color:var(--text-on-navy)}
+.stickers{display:flex;gap:.9rem;margin-top:1.5rem;flex-wrap:wrap}
+.sticker{
+  background:var(--paper);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:12px;
+  padding:.3rem .9rem;
+  font-family:var(--disp);font-weight:700;font-size:.82rem;
+  box-shadow:4px 4px 0 var(--pink);
+  font-variant-numeric:tabular-nums;
+}
+.sticker b{font-family:var(--latin);font-weight:800;font-size:1.05rem;margin-left:.15rem}
+.sticker:nth-child(odd){transform:rotate(-1.5deg)}
+.sticker:nth-child(even){transform:rotate(1.2deg)}
+.deco{position:absolute;font-size:1.5rem;color:var(--pink);opacity:.9;user-select:none;pointer-events:none}
+.deco.d1{top:.2rem;right:8%;transform:rotate(15deg);color:var(--lemon)}
+.deco.d2{bottom:1rem;right:2%;font-size:2.2rem;transform:rotate(-10deg)}
+.deco.d3{top:40%;right:20%;color:var(--peri);font-size:1.1rem}
+
+/* ============ toolbar ============ */
+.toolbar{
+  position:sticky;top:0;z-index:10;
+  background:rgba(13,18,56,.92);backdrop-filter:blur(6px);
+  border-bottom:2px solid rgba(255,255,255,.08);
+  padding:.75rem 1.5rem;
+}
+.toolbar-inner{max-width:1060px;margin:0 auto;display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.tab{
+  font-family:var(--disp);font-weight:700;font-size:.86rem;letter-spacing:.03em;
+  color:var(--ink);background:var(--paper);
+  border:2.5px solid var(--ink);border-radius:99px;
+  padding:.32rem 1.1rem;cursor:pointer;
+  box-shadow:3px 3px 0 rgba(0,0,0,.4);
+  transition:transform .12s ease;
+}
+.tab:hover{transform:translate(-1px,-1px)}
+.tab[aria-pressed="true"]{background:var(--pink);border-color:#fff;color:#fff}
+.tab:focus-visible,.search input:focus-visible,.btn:focus-visible,.thumb-link:focus-visible{outline:3px solid var(--lemon);outline-offset:2px}
+.search{margin-left:auto}
+.search input{
+  font-family:var(--body);font-size:.86rem;color:var(--ink);
+  background:var(--paper);border:2.5px solid var(--ink);border-radius:99px;
+  padding:.34rem 1.1rem;width:clamp(150px,22vw,250px);
+  box-shadow:3px 3px 0 rgba(0,0,0,.4);
+}
+.search input::placeholder{color:#8b90b5}
+
+/* ============ sections ============ */
+main{max-width:1060px;margin:0 auto;padding:2.2rem 1.5rem 3.5rem}
+.sec{margin-bottom:2.8rem}
+.sec-head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.3rem}
+.sec-num{
+  font-family:var(--latin);font-weight:800;font-size:1.5rem;line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px var(--pink);
+}
+.sec-head h2{
+  margin:0;font-family:var(--disp);font-weight:900;font-size:1.45rem;letter-spacing:.05em;
+}
+.sec-head .rule{flex:1;border-top:3px dotted rgba(255,255,255,.25)}
+.sec-head .cnt{
+  font-family:var(--latin);font-weight:800;font-size:.8rem;color:var(--navy);
+  background:var(--peri);border-radius:99px;padding:.05rem .7rem;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ============ video cards ============ */
+.grid{display:grid;gap:1.5rem 1.3rem;grid-template-columns:repeat(auto-fill,minmax(268px,1fr))}
+.vcard{
+  background:var(--paper);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:18px;
+  box-shadow:6px 7px 0 rgba(0,0,0,.45);
+  overflow:visible;position:relative;
+  display:flex;flex-direction:column;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.vcard:hover{transform:translate(-2px,-3px);box-shadow:9px 11px 0 rgba(0,0,0,.5)}
+.thumb-link{display:block;position:relative;border-radius:15px 15px 0 0;overflow:hidden;text-decoration:none}
+.thumb{
+  aspect-ratio:16/9;display:grid;place-items:center;position:relative;color:#fff;
+  border-bottom:2.5px solid var(--ink);
+  background:linear-gradient(135deg,#2a3390,#141a4d);
+}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play{
+  position:absolute;inset:0;margin:auto;
+  width:58px;height:58px;border-radius:50%;
+  background:#fff;color:var(--pink);
+  border:3px solid var(--pink);
+  display:grid;place-items:center;
+  font-size:1.3rem;padding-left:4px;
+  box-shadow:0 4px 14px rgba(0,0,0,.35);
+  transition:transform .15s ease;
+}
+.thumb-link:hover .play{transform:scale(1.12)}
+.badge-new{
+  position:absolute;top:-.7rem;left:-.6rem;z-index:2;
+  font-family:var(--latin);font-weight:800;font-size:.78rem;letter-spacing:.08em;
+  background:var(--lemon);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:10px;
+  padding:.1rem .6rem;transform:rotate(-8deg);
+  box-shadow:2px 3px 0 rgba(0,0,0,.4);
+}
+/* 準備中カード */
+.soon .thumb img{filter:saturate(.45) brightness(.6)}
+.badge-soon{
+  position:absolute;inset:0;margin:auto;z-index:2;
+  width:max-content;height:max-content;
+  font-family:var(--latin);font-weight:800;font-size:.95rem;letter-spacing:.12em;
+  background:var(--paper);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:10px;
+  padding:.2rem .9rem;transform:rotate(-6deg);
+  box-shadow:3px 4px 0 var(--pink);
+}
+.vbody{padding:.9rem 1rem 1.05rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.chip{
+  font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.05em;
+  border:2px solid;border-radius:99px;padding:.05rem .6rem;
+}
+.chip.office{color:#3542c8;border-color:#3542c8;background:var(--peri-pale)}
+.chip.class{color:var(--pink-deep);border-color:var(--pink-deep);background:var(--pink-pale)}
+.stars{font-size:.78rem;color:#f5a300;letter-spacing:.12em}
+.stars .off{opacity:.2}
+.vtitle{
+  margin:0;flex:1;
+  font-family:var(--disp);font-weight:700;font-size:1rem;line-height:1.5;
+  text-wrap:balance;
+}
+.extras{display:flex;gap:.45rem;flex-wrap:wrap}
+.mini{
+  font-size:.74rem;font-weight:700;text-decoration:none;
+  color:var(--ink);background:#f4f5ff;
+  border:1.5px dashed var(--ink);border-radius:99px;
+  padding:.15rem .7rem;
+}
+.mini:hover{background:var(--pink-pale);border-color:var(--pink-deep);color:var(--pink-deep)}
+.btn{
+  align-self:flex-start;
+  font-family:var(--disp);font-weight:700;font-size:.84rem;text-decoration:none;
+  color:#fff;background:var(--ink);
+  border:2px solid var(--ink);border-radius:10px;
+  padding:.4rem 1rem;
+  box-shadow:3px 3px 0 var(--pink);
+  transition:transform .12s ease;
+}
+.btn:hover{transform:translate(-1px,-1px);background:var(--pink);border-color:var(--pink);box-shadow:3px 3px 0 var(--ink)}
+.empty{color:var(--text-sub);text-align:center;padding:1.5rem 0}
+
+/* ============ articles ============ */
+.paper-panel{
+  background:var(--paper);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:18px;
+  box-shadow:6px 7px 0 rgba(0,0,0,.45);
+  padding:1.15rem 1.3rem;
+}
+.grid2{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.paper-panel h3{
+  margin:0 0 .5rem;font-family:var(--disp);font-weight:900;font-size:1rem;
+  display:flex;align-items:center;gap:.55rem;
+}
+.src{
+  font-family:var(--latin);font-weight:800;font-size:.68rem;letter-spacing:.06em;
+  color:#fff;border-radius:7px;padding:.08rem .55rem;transform:rotate(-2deg);
+  border:2px solid var(--ink);
+}
+.src.iportal{background:#3542c8}
+.src.note{background:var(--mint)}
+.paper-panel ul{margin:0;padding:0;list-style:none}
+.paper-panel li{border-top:2px dotted #c9cdf0}
+.paper-panel li:first-child{border-top:none}
+.paper-panel a{display:block;padding:.6rem .15rem;text-decoration:none;font-size:.88rem;font-weight:500}
+.paper-panel a:hover{color:var(--pink-deep)}
+
+footer{
+  max-width:1060px;margin:0 auto;padding:0 1.5rem 3rem;
+  color:var(--text-sub);font-size:.75rem;
+}
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="deco d1">✦</span><span class="deco d2">✦</span><span class="deco d3">●</span>
+    <span class="eyebrow">ON-DEMAND LIBRARY</span>
+    <h1><span class="ai">AI</span>まなびば</h1>
+    <svg class="scribble" viewBox="0 0 340 18" fill="none" aria-hidden="true">
+      <path d="M4 12 C 60 4, 120 16, 175 9 S 290 6, 336 11" stroke="#ff3e8e" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <p class="lede">AIの活用方法を、<strong>見たいときに・見たい順番で</strong>学べる動画ライブラリ。動画を見たら、セットの<strong>課題（Forms）</strong>を提出してください。</p>
+    <div class="stickers" id="stickers"></div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <button class="tab" data-cat="all" aria-pressed="true">ぜんぶ</button>
+    <button class="tab" data-cat="教務事務系" aria-pressed="false">教務事務系</button>
+    <button class="tab" data-cat="授業系" aria-pressed="false">授業系</button>
+    <div class="search"><input id="q" type="search" placeholder="タイトルで検索"></div>
+  </div>
+</div>
+
+<main>
+  <section class="sec" id="sec-office">
+    <div class="sec-head">
+      <span class="sec-num">01</span><h2>教務事務系</h2>
+      <span class="cnt" data-cnt></span><span class="rule"></span>
+    </div>
+    <div class="grid" data-grid></div>
+  </section>
+
+  <section class="sec" id="sec-class">
+    <div class="sec-head">
+      <span class="sec-num">02</span><h2>授業系</h2>
+      <span class="cnt" data-cnt></span><span class="rule"></span>
+    </div>
+    <div class="grid" data-grid></div>
+  </section>
+  <p class="empty" id="empty" hidden>該当する動画がありません。</p>
+
+  <section class="sec">
+    <div class="sec-head">
+      <span class="sec-num">03</span><h2>よみもの</h2>
+      <span class="cnt">授業に使えるTips</span><span class="rule"></span>
+    </div>
+    <div class="grid2" id="articles"></div>
+  </section>
+</main>
+
+<footer>
+  ※ 動画・課題・サンプルファイルを開くには社内アカウント（Microsoft 365）でのサインインが必要です。リンクが開けない場合は大塚まで連絡してください。
+</footer>
+
+<script src="data.js"></script>
+<script>
+let cat = "all", q = "";
+
+function esc(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function stars(n){
+  return '<span class="stars" aria-label="難易度'+n+'">'+[1,2,3].map(i=>'<span class="'+(i<=n?'':'off')+'">★</span>').join('')+'</span>';
+}
+function card(v){
+  const soon = !v.video;
+  const extras = [
+    ...(v.samples||[]).map(s=>`<a class="mini" href="${esc(s.url)}" target="_blank" rel="noopener">📁 ${esc(s.label)}</a>`),
+    ...(v.demo?[`<a class="mini" href="${esc(v.demo.url)}" target="_blank" rel="noopener">🔗 ${esc(v.demo.label)}</a>`]:[])
+  ];
+  const thumbInner = `
+      <div class="thumb">
+        <img src="${esc(v.thumb)}" alt="" loading="lazy">
+        ${soon?'<span class="badge-soon">COMING SOON</span>':'<span class="play">▶</span>'}
+      </div>`;
+  return `
+  <article class="vcard${soon?' soon':''}">
+    ${v.isNew?'<span class="badge-new">NEW!</span>':''}
+    ${soon
+      ? `<div class="thumb-link" aria-label="準備中：${esc(v.title)}">${thumbInner}</div>`
+      : `<a class="thumb-link" href="${esc(v.video)}" target="_blank" rel="noopener" aria-label="動画を再生：${esc(v.title)}">${thumbInner}</a>`}
+    <div class="vbody">
+      <div class="meta">
+        <span class="chip ${v.category==="教務事務系"?"office":"class"}">${esc(v.category)}</span>
+        ${stars(v.stars)}
+      </div>
+      <h3 class="vtitle">${esc(v.title)}</h3>
+      ${(!soon && extras.length)?'<div class="extras">'+extras.join('')+'</div>':''}
+      ${(!soon && v.forms)?`<a class="btn" href="${esc(v.forms)}" target="_blank" rel="noopener">📝 課題を提出する</a>`:''}
+    </div>
+  </article>`;
+}
+function render(){
+  let total = 0;
+  [["教務事務系","#sec-office"],["授業系","#sec-class"]].forEach(([c,sel])=>{
+    const sec = document.querySelector(sel);
+    const list = DATA.videos.filter(v=>v.category===c && (cat==="all"||cat===c) && v.title.toLowerCase().includes(q.toLowerCase()));
+    const visible = (cat==="all"||cat===c);
+    sec.hidden = !visible || list.length===0;
+    sec.querySelector("[data-grid]").innerHTML = list.map(card).join("");
+    sec.querySelector("[data-cnt]").textContent = list.length;
+    if(visible) total += list.length;
+  });
+  document.getElementById("empty").hidden = total>0;
+}
+function renderStickers(){
+  const n = DATA.videos.length;
+  const office = DATA.videos.filter(v=>v.category==="教務事務系").length;
+  const cls = DATA.videos.filter(v=>v.category==="授業系").length;
+  const [y,m,d] = DATA.updated.split("-");
+  document.getElementById("stickers").innerHTML =
+    `<span class="sticker">動画<b>${n}</b>本</span>`+
+    `<span class="sticker">教務事務系<b>${office}</b></span>`+
+    `<span class="sticker">授業系<b>${cls}</b></span>`+
+    `<span class="sticker">更新 <b>${Number(m)}/${Number(d)}</b></span>`;
+}
+function renderArticles(){
+  const groups = [["iPortal","社内ブログの記事","iportal"],["note","大塚のnote記事","note"]];
+  document.getElementById("articles").innerHTML = groups.map(([src,label,cls])=>{
+    const items = DATA.articles.filter(a=>a.source===src);
+    if(!items.length) return "";
+    return `<div class="paper-panel">
+      <h3><span class="src ${cls}">${esc(src)}</span>${esc(label)}</h3>
+      <ul>${items.map(a=>`<li><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a></li>`).join("")}</ul>
+    </div>`;
+  }).join("");
+}
+document.querySelectorAll(".tab").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-pressed","false"));
+    b.setAttribute("aria-pressed","true");
+    cat = b.dataset.cat; render();
+  });
+});
+document.getElementById("q").addEventListener("input",e=>{ q = e.target.value.trim(); render(); });
+renderStickers(); render(); renderArticles();
+</script>
+</body>
+</html>
