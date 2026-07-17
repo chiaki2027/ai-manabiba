@@ -18,7 +18,7 @@
 // ============================================================
 
 const DATA = {
-  updated: "2026-07-17",
+  updated: "2026-07-17", // 全14本公開（準備中3本→公開に切替）
 
   videos: [
     // ---------- 教務事務系 ----------
@@ -143,7 +143,8 @@ const DATA = {
       title: "手書きの作文を自動添削する",
       category: "授業系",
       stars: 2,
-      video: null, // 準備中
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQAK-NUyJYfYT64r3ZO9Pc6KAQ4LKbk6VN8BALwLj1-Vu98?e=tAT2Hu",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UOFZUUkNOMFoyNEIzVE9XSUhQNkNDNjhLSi4u",
       samples: [],
       demo: { label: "AIの出力結果", url: "https://isiglobal000.sharepoint.com/:b:/s/a_byUser-AI_2026/IQB1MVMPYkEoTKXyM5F0KVtfASWdgpRxVfkw8h97qZV-mRw?e=vQXJ9N" },
@@ -153,17 +154,19 @@ const DATA = {
       title: "漢字の成り立ちやコロケーションを視覚的に提示する",
       category: "授業系",
       stars: 3,
-      video: null, // 準備中
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQAjNPp2X0xzQZloXyIQHVrWAcY0g6zJSJ6Typs9mQGjRz8?e=vwSn0W",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UQ1QzM0FHSzZCN1EwQ1RYVE8zTDMzRFNDMi4u",
       samples: [],
-      demo: null,
+      demo: { label: "アプリデモ動画", url: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDq2fVAjAZjQYWYTuDmI2AGAd864_1VJYrYv-_vPR48_Hs?e=W0yfwE" },
       thumb: "thumbs/v13.webp"
     },
     {
       title: "学生にも共有できるHTMLアプリをつくる",
       category: "授業系",
       stars: 3,
-      video: null, // 準備中
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQCgN57BB4AVT5r12qWvT6h0ATXy2jAuh92ZNpyeTW_a94s?e=SrAw22",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNjFFQlk5RjEwTE9aNVpMRzlQSzQ3WU9ZNS4u",
       samples: [],
       demo: { label: "七夕体験アプリ", url: "https://chiaki2027.github.io/Claude/" },
