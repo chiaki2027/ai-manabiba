@@ -123,6 +123,7 @@ const DATA = {
       title: "アーティファクト機能で簡易ツールをつくる",
       category: "授業系",
       stars: 1,
+      isNew: true,
       video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQAKFJkrMryBR7wWEkN75vCBAXlRrK1-r6oOGDhXOfatLtc?e=vE97Mx",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNVlHUEw1T1lGMTRSQ0FTNUc2OTJCN0QwUS4u",
       samples: [],
