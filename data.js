@@ -20,6 +20,10 @@
 const DATA = {
   updated: "2026-07-17", // 全14本公開（準備中3本→公開に切替）
 
+  // AI活用ガイドライン（タイトル横のボタン）。url を空にするとボタンは非表示。
+  // SharePointにPDFを置いて共有リンクをここに貼る。
+  guideline: { label: "AI活用ガイドライン", url: "https://isiglobal000.sharepoint.com/:b:/s/a_byUser-AI_2026/IQDC_hn8zWGtT4nkWi0lV5EbATNUSczp1JimpCTg675ssiE?e=5jL5zl" },
+
   videos: [
     // ---------- 教務事務系 ----------
     {
