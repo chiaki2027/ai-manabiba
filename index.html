@@ -69,23 +69,37 @@ h1 .ai{
   box-shadow:4px 4px 0 rgba(0,0,0,.35);
   font-family:var(--latin);
 }
-.title-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.guide-btn{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:var(--disp);font-weight:700;font-size:.9rem;text-decoration:none;
-  color:var(--ink);background:var(--paper);
-  border:2.5px solid var(--ink);
-  border-left:9px solid var(--pink);      /* 本の背表紙 */
-  border-radius:5px 12px 12px 5px;
-  padding:.42rem 1rem .42rem .85rem;
-  box-shadow:4px 4px 0 rgba(0,0,0,.35);
-  transition:transform .12s ease,box-shadow .12s ease;
-  white-space:nowrap;
-}
-.guide-btn .bookicon{font-size:1.15rem;line-height:1}
-.guide-btn:hover{transform:translate(-1px,-2px);box-shadow:5px 6px 0 rgba(0,0,0,.4)}
-.guide-btn:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
 .scribble{display:block;width:min(340px,60%);margin-top:.2rem}
+/* AI活用ガイドライン：円形アイコン＋アーチ文字。PC=ヒーロー右に浮かせる／スマホ=下に回す */
+.guide-btn{
+  position:absolute;top:50%;right:1rem;transform:translateY(-50%);
+  display:block;text-decoration:none;
+  width:clamp(104px,12vw,140px);
+}
+.guide-btn img{
+  width:100%;aspect-ratio:1;display:block;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.4);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.guide-arc{
+  position:absolute;inset:0;width:100%;height:100%;
+  overflow:visible;pointer-events:none;
+}
+.guide-arc text{
+  fill:#fff;
+  font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:1px;
+  paint-order:stroke;stroke:var(--ink);stroke-width:5px;stroke-linejoin:round;
+}
+.guide-btn:hover img{transform:scale(1.06) rotate(-2deg);box-shadow:0 9px 24px rgba(0,0,0,.45)}
+.guide-btn:focus-visible img{outline:3px solid var(--lemon);outline-offset:3px}
+@media (max-width:720px){
+  .guide-btn{
+    position:static;transform:none;
+    margin:1.4rem 0 0 .2rem;
+  }
+}
 .lede{margin:1rem 0 0;max-width:36em;color:var(--text-sub);font-size:.95rem}
 .lede strong{color:var(--text-on-navy)}
 .stickers{display:flex;gap:.9rem;margin-top:1.5rem;flex-wrap:wrap}
@@ -275,13 +289,17 @@ footer{
   <div class="hero-inner">
     <span class="deco d1">✦</span><span class="deco d2">✦</span><span class="deco d3">●</span>
     <span class="eyebrow">ON-DEMAND LIBRARY</span>
-    <div class="title-row">
-      <h1><span class="ai">AI</span>まなびば</h1>
-      <a class="guide-btn" id="guideBtn" target="_blank" rel="noopener" hidden></a>
-    </div>
+    <h1><span class="ai">AI</span>まなびば</h1>
     <svg class="scribble" viewBox="0 0 340 18" fill="none" aria-hidden="true">
       <path d="M4 12 C 60 4, 120 16, 175 9 S 290 6, 336 11" stroke="#ff3e8e" stroke-width="5" stroke-linecap="round"/>
     </svg>
+    <a class="guide-btn" id="guideBtn" target="_blank" rel="noopener" aria-label="AI活用ガイドラインを開く（PDF）" hidden>
+      <img src="guideline-icon.webp" alt="">
+      <svg class="guide-arc" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="guideArc" d="M 10 156 A 108 108 0 0 0 190 156" fill="none"/></defs>
+        <text text-anchor="middle"><textPath href="#guideArc" startOffset="50%">ガイドラインを見る</textPath></text>
+      </svg>
+    </a>
     <p class="lede">AIの活用方法を、<strong>見たいときに・見たい順番で</strong>学べる動画ライブラリ。動画を見たら、セットの<strong>課題（Forms）</strong>を提出してください。</p>
     <div class="stickers" id="stickers"></div>
   </div>
@@ -411,7 +429,6 @@ function renderGuideline(){
   const btn = document.getElementById('guideBtn');
   if(g && g.url){
     btn.href = g.url;
-    btn.innerHTML = '<span class="bookicon" aria-hidden="true">📖</span>' + esc(g.label || "AI活用ガイドライン");
     btn.hidden = false;
   } else {
     btn.hidden = true;
