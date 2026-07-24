@@ -161,18 +161,13 @@ const DATA = {
       samples: [],
       demo: { label: "アプリデモ動画", url: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDq2fVAjAZjQYWYTuDmI2AGAd864_1VJYrYv-_vPR48_Hs?e=W0yfwE" },
       thumb: "thumbs/v13.webp"
-    },
-    {
-      title: "学生にも共有できるHTMLアプリをつくる",
-      category: "授業系",
-      stars: 3,
-      isNew: true,
-      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQCeGUFCU4RTSokDD9bzf529AcMfXK2ImheJMnGa3pezuwA?e=rcCxfn",
-      forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNjFFQlk5RjEwTE9aNVpMRzlQSzQ3WU9ZNS4u",
-      samples: [],
-      demo: { label: "七夕体験アプリ", url: "https://chiaki2027.github.io/Claude/" },
-      thumb: "thumbs/v14.webp"
     }
+    // ※「学生にも共有できるHTMLアプリをつくる」(v14)は、学生配布アプリの事前申請運用化に伴い2026-07-17に非表示化。
+    //   動画・七夕体験アプリ本体は残存。運用が変われば下記を復活させる：
+    //   { title:"学生にも共有できるHTMLアプリをつくる", category:"授業系", stars:3, isNew:true,
+    //     video:"https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQCeGUFCU4RTSokDD9bzf529AcMfXK2ImheJMnGa3pezuwA?e=rcCxfn",
+    //     forms:"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNjFFQlk5RjEwTE9aNVpMRzlQSzQ3WU9ZNS4u",
+    //     samples:[], demo:{ label:"七夕体験アプリ", url:"https://chiaki2027.github.io/Claude/" }, thumb:"thumbs/v14.webp" }
   ],
 
   articles: [
