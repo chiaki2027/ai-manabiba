@@ -128,7 +128,7 @@ const DATA = {
       category: "授業系",
       stars: 1,
       isNew: true,
-      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQAKFJkrMryBR7wWEkN75vCBAXlRrK1-r6oOGDhXOfatLtc?e=vE97Mx",
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDYX7X5J-i5QIibE65ihC9wAf_lb1QEuPnrPe3kynWFZTk?e=Vl5mfl",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNVlHUEw1T1lGMTRSQ0FTNUc2OTJCN0QwUS4u",
       samples: [],
       demo: { label: "会話お題ルーレット", url: "apps/roulette.html" },
@@ -160,18 +160,24 @@ const DATA = {
       category: "授業系",
       stars: 3,
       isNew: true,
-      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQAXt78tYMS7SpUOrTlZhGvTAYRA-uENXMoVRRIqlQG9q8I?e=SwdMN7",
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDcXcqYOTqVSK1pg4_8Lou3AZO2-L_vV33i2Q5ovul0evI?e=7lbfKd",
       forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UQ1QzM0FHSzZCN1EwQ1RYVE8zTDMzRFNDMi4u",
       samples: [],
       demo: { label: "アプリデモ動画", url: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDq2fVAjAZjQYWYTuDmI2AGAd864_1VJYrYv-_vPR48_Hs?e=W0yfwE" },
       thumb: "thumbs/v13.webp"
+    },
+    {
+      // 2026-07-17に非表示化 → 2026-07-27に復活（修正版2の公開に伴い）
+      title: "学生にも共有できるHTMLアプリをつくる",
+      category: "授業系",
+      stars: 3,
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQAzqJ-kNGeATrfK7RpsGSdzAR4EGsrFYZpsRBwB8gZPqag?e=XeejYc",
+      forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNjFFQlk5RjEwTE9aNVpMRzlQSzQ3WU9ZNS4u",
+      samples: [],
+      demo: { label: "七夕体験アプリ", url: "https://chiaki2027.github.io/Claude/" },
+      thumb: "thumbs/v14.webp"
     }
-    // ※「学生にも共有できるHTMLアプリをつくる」(v14)は、学生配布アプリの事前申請運用化に伴い2026-07-17に非表示化。
-    //   動画・七夕体験アプリ本体は残存。運用が変われば下記を復活させる：
-    //   { title:"学生にも共有できるHTMLアプリをつくる", category:"授業系", stars:3, isNew:true,
-    //     video:"https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQCeGUFCU4RTSokDD9bzf529AcMfXK2ImheJMnGa3pezuwA?e=rcCxfn",
-    //     forms:"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNjFFQlk5RjEwTE9aNVpMRzlQSzQ3WU9ZNS4u",
-    //     samples:[], demo:{ label:"七夕体験アプリ", url:"https://chiaki2027.github.io/Claude/" }, thumb:"thumbs/v14.webp" }
   ],
 
   articles: [
