@@ -18,7 +18,7 @@
 // ============================================================
 
 const DATA = {
-  updated: "2026-07-17", // 全14本公開（準備中3本→公開に切替）
+  updated: "2026-07-27", // 全15本公開
 
   // AI活用ガイドライン（タイトル横のボタン）。url を空にするとボタンは非表示。
   // SharePointにPDFを置いて共有リンクをここに貼る。
@@ -177,6 +177,17 @@ const DATA = {
       samples: [],
       demo: { label: "七夕体験アプリ", url: "https://chiaki2027.github.io/Claude/" },
       thumb: "thumbs/v14.webp"
+    },
+    {
+      title: "ClaudeCodeでJLPT聴解問題を量産する",
+      category: "授業系",
+      stars: 3,
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQD1ueTCCDnrRYv_8Slj2ne1AbZNQiaOFBP8_y820oeQ3y0?e=vhRpKc",
+      forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UOEVDWUtWQjRWOFRVWEY2M0YzNlhPTDlGQS4u",
+      samples: [],
+      demo: null,
+      thumb: "thumbs/v15.webp"
     }
   ],
 
