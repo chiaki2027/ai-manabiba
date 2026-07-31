@@ -18,7 +18,7 @@
 // ============================================================
 
 const DATA = {
-  updated: "2026-07-27", // 全15本公開
+  updated: "2026-07-31", // 全17本公開
 
   // AI活用ガイドライン（タイトル横のボタン）。url を空にするとボタンは非表示。
   // SharePointにPDFを置いて共有リンクをここに貼る。
@@ -100,6 +100,28 @@ const DATA = {
       ],
       demo: { label: "AIの出力結果", url: "https://isiglobal000.sharepoint.com/:x:/s/a_byUser-AI_2026/IQBnK9bPpVIQRqIZaEvmPli5AZVkT7H5p8bCvjzTIpaWiys?e=GZoTVC" },
       thumb: "thumbs/v07.webp"
+    },
+    {
+      title: "定例会議の前に相談報告事項を自動で準備",
+      category: "教務事務系",
+      stars: 3,
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDUIesY6fXhR7-ReTaOf22CAXF9DQ3FbjLBb1mBallJ-x8?e=VesKUD",
+      forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UMDVSTkY3TEpKVTdDWkYzTkI2WUFPNjY4Ty4u",
+      samples: [],
+      demo: null,
+      thumb: "thumbs/v17.webp"
+    },
+    {
+      title: "定例会議の議事録を自動でTeamsに流す",
+      category: "教務事務系",
+      stars: 3,
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQBQFOIBsjDzS7Ly_z4N9r9-AYWopOCU2qCypk_hT_jsULA?e=XiInFW",
+      forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UNFJWR1hDNTUxVVgzVDFYVzFNQUg4NVpMNy4u",
+      samples: [],
+      demo: null,
+      thumb: "thumbs/v16.webp"
     },
 
     // ---------- 授業系 ----------
@@ -199,6 +221,7 @@ const DATA = {
     { source: "note", title: "訂正フィードバックの科学 そのさり気ない｢言い直し｣届いてますか？", url: "https://note.com/nihongo_momoiro/n/n5e2fcd0fe7af" },
     { source: "note", title: "Google AI Studio × TTS でJLPTの聴解音声を簡単作成", url: "https://note.com/nihongo_momoiro/n/nbd078bb2a598" },
     { source: "note", title: "chatGPT 漢字の授業で学生の主体性を高める", url: "https://note.com/nihongo_momoiro/n/nd412bf0dfff5" },
-    { source: "note", title: "なぜ伝わらないの？を授業にする 異文化インシデント·ディスカッション", url: "https://note.com/nihongo_momoiro/n/n82f89c3d0677" }
+    { source: "note", title: "なぜ伝わらないの？を授業にする 異文化インシデント·ディスカッション", url: "https://note.com/nihongo_momoiro/n/n82f89c3d0677" },
+    { source: "note", title: "書き取らせないディクテーション。「ディクトグロス」で話し合いが始まる", url: "https://note.com/nihongo_momoiro/n/n16e7e9edc32c" }
   ]
 };
