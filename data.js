@@ -18,7 +18,7 @@
 // ============================================================
 
 const DATA = {
-  updated: "2026-07-31", // 全17本公開
+  updated: "2026-10-15", // 全18本公開
 
   // AI活用ガイドライン（タイトル横のボタン）。url を空にするとボタンは非表示。
   // SharePointにPDFを置いて共有リンクをここに貼る。
@@ -122,6 +122,17 @@ const DATA = {
       samples: [],
       demo: null,
       thumb: "thumbs/v16.webp"
+    },
+    {
+      title: "マニュアルを簡単作成",
+      category: "教務事務系",
+      stars: 2,
+      isNew: true,
+      video: "https://isiglobal000.sharepoint.com/:v:/s/a_byUser-AI_2026/IQDHNGPmGhAGRrNvdV2ag8xXAQkXJQWlmfK4CbfKKWuusOk?e=ZJx2IC",
+      forms: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=rUgncyEqgkGgeCc_SIN6ZqmWniSElbhPq_377FiwKS5UMDA3VTIwSDdHV0VGVzU5R01XT1BFVlM0Qy4u",
+      samples: [],
+      demo: { label: "マニュアルのサンプル", url: "https://isiglobal000.sharepoint.com/:p:/s/a_byUser-AI_2026/IQAZtnvz0YjmRoCgVIDIYe6OAV98QKYBjON8so355h1fGvE?e=fyDfJM" },
+      thumb: "thumbs/v18.webp"
     },
 
     // ---------- 授業系 ----------
